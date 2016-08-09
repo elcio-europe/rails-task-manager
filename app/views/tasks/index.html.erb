@@ -1,11 +1,10 @@
 
 <!-- criar links to delete, update, show -->
 <% @tasks.each do |task| %>
-  <h2><%= task.id %></h2>
-  <p><%= task.description %></p>
-  <p><%= task.done %></p>
-  <button > Delete? <%= link_to "Delete", task_path(task),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
+  <%= link_to task.id, task_path(task) %>
+  <h2><%= task.content %></h2>
+  <h2><%= task.done %></h2>
+
+
 <% end %>
 </button>
