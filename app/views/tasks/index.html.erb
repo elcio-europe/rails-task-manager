@@ -4,7 +4,9 @@
   <%= link_to task.id, task_path(task) %>
   <h2><%= task.content %></h2>
   <h2><%= task.done %></h2>
-
+  <button> <%= link_to 'EDIT', edit_task_path(task)  %> </button>
+  <button> <%= link_to 'DELETE', delete_task_path(task),  method: :delete %> </button>
 
 <% end %>
-</button>
+
+<button> <%= link_to 'NEW', tasks_new_path  %> </button>

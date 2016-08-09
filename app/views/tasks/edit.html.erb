@@ -1,7 +1,10 @@
 <%= form_for(@task) do |t| %>
   <%= t.label :content %>
   <%= t.text_field :content %>
+  <select>
   <%= t.label :done %>
-  <%= t.text_field :done %>
+  <option value=false selected>Undone</option>
+  <option value=true>Done</option>
+  </select>
   <%= t.submit %>
 <% end %>

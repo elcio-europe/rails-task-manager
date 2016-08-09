@@ -1,6 +1,11 @@
 
 <h2><%= @task.id %></h2>
+<H3> TASK DESCRIPTION </H3>
 <p><%= @task.content %></p>
+<H3> Status </H3>
 <p><%= @task.done %></p>
-<%= link_to '/tasks', tasks_path  %>
+<button> <%= link_to 'BACK', tasks_path  %> </button>
 
+<button> <%= link_to 'EDIT', edit_task_path(@task)  %> </button>
+
+<button> <%= link_to 'DELETE', delete_task_path(@task),  method: :delete %> </button>
